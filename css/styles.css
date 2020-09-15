@@ -46,3 +46,8 @@ h3 {
   margin: 0 auto;
   padding: 20px;
 }
+
+.item_container {
+  max-width: var(--page-max-width);
+  margin: 0.67em auto;
+}
