@@ -7,8 +7,8 @@ let pokemonList = [
 
 for (let i = 0; i < pokemonList.length; i++) {
   if (pokemonList[i].height >= 2) {
-    document.write("<p>" + pokemonList[i].name + " (length: " + pokemonList[i].height + ") - Wow, that’s big!</p>" );
+    document.write("<h3>" + pokemonList[i].name + "</h3>" + "<p>(height: " + pokemonList[i].height + ") - Wow, that’s big!</p>" );
   } else {
-    document.write("<p>" + pokemonList[i].name + " (length: " + pokemonList[i].height + ")</p>" );
+    document.write("<h3>" + pokemonList[i].name + "</h3>" + "<p>(height: " + pokemonList[i].height + ")</p>" );
   }
 }
