@@ -37,3 +37,12 @@ h3 {
   font-size: 18px;
   font-weight: var(--bold-font-weight);
 }
+
+.page-header {
+  background-color: var(--background-color-page-header);
+  display: flex;
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
