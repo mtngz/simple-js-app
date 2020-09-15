@@ -1,0 +1,39 @@
+:root {
+  --background-color: #fffefe;
+  --background-color-page-header: #fa4659;
+  --primary-color: black;
+  --primary-font-family: "Josefin Sans", sans-serif;
+  --primary-font-weight: 400;
+  --primary-font-size: 16px;
+  --primary-line-height: 1.6;
+  --bold-font-weight: 700;
+  --page-max-width: 1400px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--primary-font-family);
+  font-weight: var(--primary-font-weight);
+  font-size: var(--primary-font-size);
+  line-height: var(--primary-line-height);
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: var(--bold-font-weight);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: var(--bold-font-weight);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: var(--bold-font-weight);
+}
