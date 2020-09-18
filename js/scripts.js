@@ -13,8 +13,41 @@ let pokemonList = [
 //   }
 // }
 
+// pokemonList.forEach(function (pokemon) {
+//   Object.keys(pokemon).forEach(function (property) {
+//     document.write(property + ": " + pokemon[property] + "<br>");
+//   });
+// });
+
 pokemonList.forEach(function (pokemon) {
-  Object.keys(pokemon).forEach(function (property) {
-    document.write(property + ": " + pokemon[property] + "<br>");
-  });
+  if (pokemon.height >= 2) {
+    document.write(
+      "<h3>" +
+        pokemon.name +
+        "</h3>" +
+        "height: " +
+        pokemon.height +
+        "- Wow, that's big!" +
+        "<br>" +
+        "weight: " +
+        pokemon.weight +
+        "<br>" +
+        "types: " +
+        pokemon.types
+    );
+  } else {
+    document.write(
+      "<h3>" +
+        pokemon.name +
+        "</h3>" +
+        "height: " +
+        pokemon.height +
+        "<br>" +
+        "weight: " +
+        pokemon.weight +
+        "<br>" +
+        "types: " +
+        pokemon.types
+    );
+  }
 });
