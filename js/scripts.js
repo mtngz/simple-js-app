@@ -1,3 +1,5 @@
+let pokemonRepository = (function () {})();
+
 let pokemonList = [
   { name: "Venusaur", height: 2, weight: 100, types: ["grass", "poison"] },
   { name: "Charizard", height: 1.7, weight: 90.5, types: ["fire", "flying"] },
