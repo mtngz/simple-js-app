@@ -12,3 +12,9 @@ let pokemonList = [
 //     document.write("<h3>" + pokemonList[i].name + "</h3>" + "<p>(height: " + pokemonList[i].height + ")</p>" );
 //   }
 // }
+
+pokemonList.forEach(function (pokemon) {
+  Object.keys(pokemon).forEach(function (property) {
+    document.write(property + ": " + pokemon[property] + "<br>");
+  });
+});
