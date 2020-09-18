@@ -36,7 +36,7 @@ let pokemonRepository = (function () {
 
 let newPokemonList = pokemonRepository.getAll();
 
-pokemonList.forEach(function (pokemon) {
+newPokemonList.forEach(function (pokemon) {
   if (pokemon.height >= 2) {
     document.write(
       "<h3>" +
