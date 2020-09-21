@@ -39,4 +39,5 @@ newPokemonList.forEach(function (pokemon) {
   button.innerText = pokemon.name;
   button.classList.add("pokemonListButton");
   listItem.appendChild(button);
+  pokemonHomeList.appendChild(listItem);
 });
