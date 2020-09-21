@@ -43,4 +43,6 @@ let pokemonRepository = (function () {
 
 let newPokemonList = pokemonRepository.getAll();
 
-newPokemonList.forEach(function (pokemon) {});
+newPokemonList.forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
+});
