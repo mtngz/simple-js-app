@@ -30,20 +30,6 @@ let pokemonRepository = (function () {
   };
 })();
 
-// for (let i = 0; i < pokemonList.length; i++) {
-//   if (pokemonList[i].height >= 2) {
-//     document.write("<h3>" + pokemonList[i].name + "</h3>" + "<p>(height: " + pokemonList[i].height + ") - Wow, that’s big!</p>" );
-//   } else {
-//     document.write("<h3>" + pokemonList[i].name + "</h3>" + "<p>(height: " + pokemonList[i].height + ")</p>" );
-//   }
-// }
-
-// pokemonList.forEach(function (pokemon) {
-//   Object.keys(pokemon).forEach(function (property) {
-//     document.write(property + ": " + pokemon[property] + "<br>");
-//   });
-// });
-
 let newPokemonList = pokemonRepository.getAll();
 
 newPokemonList.forEach(function (pokemon) {
