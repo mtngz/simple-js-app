@@ -35,4 +35,6 @@ let newPokemonList = pokemonRepository.getAll();
 newPokemonList.forEach(function (pokemon) {
   let pokemonHomeList = document.querySelector(".pokemonHomeList");
   let listItem = document.createElement("li");
+  let button = document.createElement("button");
+  button.innerText = pokemon.name;
 });
