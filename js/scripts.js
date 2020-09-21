@@ -24,7 +24,15 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
 
-  function addListItem(pokemon) {}
+  function addListItem(pokemon) {
+    let pokemonHomeList = document.querySelector(".pokemonHomeList");
+    let listItem = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("pokemonListButton");
+    listItem.appendChild(button);
+    pokemonHomeList.appendChild(listItem);
+  }
 
   return {
     add: add,
@@ -34,12 +42,4 @@ let pokemonRepository = (function () {
 
 let newPokemonList = pokemonRepository.getAll();
 
-newPokemonList.forEach(function (pokemon) {
-  let pokemonHomeList = document.querySelector(".pokemonHomeList");
-  let listItem = document.createElement("li");
-  let button = document.createElement("button");
-  button.innerText = pokemon.name;
-  button.classList.add("pokemonListButton");
-  listItem.appendChild(button);
-  pokemonHomeList.appendChild(listItem);
-});
+newPokemonList.forEach(function (pokemon) {});
