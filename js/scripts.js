@@ -33,34 +33,6 @@ let pokemonRepository = (function () {
 let newPokemonList = pokemonRepository.getAll();
 
 newPokemonList.forEach(function (pokemon) {
-  if (pokemon.height >= 2) {
-    document.write(
-      "<h3>" +
-        pokemon.name +
-        "</h3>" +
-        "height: " +
-        pokemon.height +
-        "- Wow, that's big!" +
-        "<br>" +
-        "weight: " +
-        pokemon.weight +
-        "<br>" +
-        "types: " +
-        pokemon.types
-    );
-  } else {
-    document.write(
-      "<h3>" +
-        pokemon.name +
-        "</h3>" +
-        "height: " +
-        pokemon.height +
-        "<br>" +
-        "weight: " +
-        pokemon.weight +
-        "<br>" +
-        "types: " +
-        pokemon.types
-    );
-  }
+  let pokemonHomeList = document.querySelector(".pokemonHomeList");
+  let listItem = document.createElement("li");
 });
