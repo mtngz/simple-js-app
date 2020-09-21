@@ -2,12 +2,16 @@
   --background-color: #fffefe;
   --background-color-page-header: #fa4659;
   --primary-color: black;
+  --background-color-pokemonListButton: #3b4cca;
+  --color-pokemonListButton: #fff;
   --primary-font-family: "Josefin Sans", sans-serif;
   --primary-font-weight: 400;
   --primary-font-size: 16px;
   --primary-line-height: 1.6;
   --bold-font-weight: 700;
   --page-max-width: 1400px;
+  --pokemonListButton-font-size: 20px;
+  --pokemonListButton-font-weight: 600;
 }
 
 * {
@@ -50,4 +54,15 @@ h3 {
 .body_container {
   max-width: var(--page-max-width);
   margin: 0.67em auto;
+}
+
+.pokemonListButton {
+  background-color: var(--background-color-pokemonListButton);
+  color: var(--color-pokemonListButton);
+  font-size: var(--pokemonListButton-font-size);
+  font-weight: var(--pokemonListButton-font-weight);
+  height: 50px;
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 5px 0;
 }
