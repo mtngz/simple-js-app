@@ -62,7 +62,8 @@ h3 {
   margin: 0.67em auto;
 }
 
-.pokemonListButton {
+.pokemonListButton,
+.pokemonListButton:active {
   background-color: var(--background-color-pokemonListButton);
   color: var(--color-pokemonListButton);
   font-size: var(--pokemonListButton-font-size);
