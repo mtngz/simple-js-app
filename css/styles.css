@@ -69,4 +69,5 @@ h3 {
   width: 100%;
   max-width: var(--page-max-width);
   margin: 5px 0;
+  border: none;
 }
