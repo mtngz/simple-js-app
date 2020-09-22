@@ -54,6 +54,7 @@ h3 {
   max-width: var(--page-max-width);
   margin: 0 auto;
   padding: 20px;
+  border-radius: 100px 50px;
 }
 
 .body_container {
