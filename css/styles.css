@@ -11,6 +11,7 @@
   --primary-line-height: 1.6;
   --bold-font-weight: 700;
   --page-max-width: 1400px;
+  --pokemonListButton-max-width: 870px;
   --pokemonListButton-font-size: 20px;
   --pokemonListButton-font-weight: 600;
 }
@@ -69,8 +70,8 @@ h3 {
   font-size: var(--pokemonListButton-font-size);
   font-weight: var(--pokemonListButton-font-weight);
   height: 50px;
-  width: 100%;
-  max-width: var(--page-max-width);
+  width: 63%;
+  max-width: var(--pokemonListButton-max-width);
   margin: 5px 0;
   border: none;
   border-radius: 50px;
