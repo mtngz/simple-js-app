@@ -2,7 +2,8 @@
   --background-color: #fffefe;
   --background-color-page-header: #c00;
   --primary-color: black;
-  --background-color-pokemonListButton: #3b4cca;
+  --background-color-pokemonListButton: #0f125d;
+  --background-color-pokemonListButton-hover: #3b4cca;
   --color-pokemonListButton: #fff;
   --primary-font-family: "Josefin Sans", sans-serif;
   --primary-font-weight: 400;
@@ -70,4 +71,12 @@ h3 {
   max-width: var(--page-max-width);
   margin: 5px 0;
   border: none;
+  transition: 0.2s background-color;
+  transition: 0.2s box-shadow;
+}
+
+.pokemonListButton:hover {
+  cursor: pointer;
+  background-color: var(--background-color-pokemonListButton-hover);
+  box-shadow: 0px 0px 10px 3px var(--background-color-pokemonListButton-hover);
 }
