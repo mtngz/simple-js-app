@@ -25,6 +25,10 @@ body {
   font-size: var(--primary-font-size);
   line-height: var(--primary-line-height);
   color: var(--primary-color);
+  background-image: url(../img/pokemon_background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 h1 {
