@@ -117,6 +117,14 @@ let pokemonRepository = (function () {
     }
   });
 
+  // lets you close the modal by clicking anywhere outside the modal
+  modalContainer.addEventListener("click", (e) => {
+    let target = e.target;
+    if (target === modalContainer) {
+      hideModal();
+    }
+  });
+
   return {
     add: add,
     getAll: getAll,
