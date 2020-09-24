@@ -74,6 +74,36 @@ let pokemonRepository = (function () {
   function showModal(item) {
     // Clear all existing modal content
     modalContainer.innerHTML = "";
+
+    // create Element <div> which is the modal
+    let modal = document.createElement("div");
+    modal.classList.add("modal");
+
+    // Add content to .modal
+    let closeButtonElement = document.createElement("button");
+    closeButtonElement.classList.add("modal-close");
+    closeButtonElement.innerText = "Close";
+    closeButtonElement.addEventListener("click", hideModal);
+
+    let titleElement = document.createElement("h1");
+    titleElement.innerText = item.name;
+
+    let specsElement = document.createElement("p");
+    specsElement.innerText =
+      "Height: " + item.height + " Weight: " + item.weight;
+
+    let imageElement = document.createElement("img");
+    imageElement.src = item.imageUrl;
+
+    let typesElement = document.createElement("p");
+    // loop for array to display one or more types correctly
+    item.types.forEach(function (el, index) {
+      if (item.types.length - 1 == index) {
+        typesElement.textContent += el.type.name;
+      } else {
+        typesElement.textContent += el.type.name + ", ";
+      }
+    });
   }
 
   return {
