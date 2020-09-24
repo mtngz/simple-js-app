@@ -144,3 +144,9 @@ h3 {
 .modal p {
   margin-bottom: 0;
 }
+
+.modal > img {
+  text-align: center;
+  width: 250px;
+  height: 250px;
+}
