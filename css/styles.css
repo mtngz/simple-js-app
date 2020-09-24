@@ -140,3 +140,7 @@ h3 {
 .modal h1 {
   margin-top: 0;
 }
+
+.modal p {
+  margin-bottom: 0;
+}
