@@ -110,6 +110,13 @@ let pokemonRepository = (function () {
     modalContainer.classList.remove("is-visible");
   }
 
+  // lets you close the modal by pressing ESCAPE on keyboard
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modalContainer.classList.contains("is-visible")) {
+      hideModal();
+    }
+  });
+
   return {
     add: add,
     getAll: getAll,
