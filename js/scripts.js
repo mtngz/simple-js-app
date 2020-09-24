@@ -104,6 +104,13 @@ let pokemonRepository = (function () {
         typesElement.textContent += el.type.name + ", ";
       }
     });
+
+    modal.appendChild(closeButtonElement);
+    modal.appendChild(titleElement);
+    modal.appendChild(specsElement);
+    modal.appendChild(imageElement);
+    modal.appendChild(typesElement);
+    modalContainer.appendChild(modal);
   }
 
   function hideModal() {
