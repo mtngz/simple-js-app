@@ -111,7 +111,7 @@ h3 {
   background: var(--background-modal-container);
 
   /* to show it above other content */
-  z-index: 999;
+  z-index: 990;
 
   /* to allow scrolling if the screen is not high enough*/
   overflow: auto;
