@@ -139,6 +139,10 @@ let pokemonRepository = (function () {
     loadingContainer.classList.add("is-visible");
   }
 
+  function hideLoadingMessage() {
+    loadingContainer.classList.remove("is-visible");
+  }
+
   return {
     add: add,
     getAll: getAll,
