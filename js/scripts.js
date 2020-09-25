@@ -135,6 +135,10 @@ let pokemonRepository = (function () {
     }
   });
 
+  function showLoadingMessage() {
+    loadingContainer.classList.add("is-visible");
+  }
+
   return {
     add: add,
     getAll: getAll,
