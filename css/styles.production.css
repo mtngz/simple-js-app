@@ -123,7 +123,7 @@ h3 {
   background: #00000040;
 
   /* to show it above other content */
-  z-index: 999;
+  z-index: 990;
 
   /* to allow scrolling if the screen is not high enough*/
   overflow: auto;
