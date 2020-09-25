@@ -63,9 +63,11 @@ let pokemonRepository = (function () {
     let url = item.detailsUrl;
     return fetch(url)
       .then(function (response) {
+        hideLoadingMessage();
         return response.json();
       })
       .then(function (details) {
+        hideLoadingMessage();
         // Add the details to the item
         item.imageUrl = details.sprites.front_default;
         item.height = details.height;
@@ -73,6 +75,7 @@ let pokemonRepository = (function () {
         item.types = details.types;
       })
       .catch(function (e) {
+        hideLoadingMessage();
         console.error(e);
       });
   }
