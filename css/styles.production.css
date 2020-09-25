@@ -208,6 +208,10 @@ h3 {
 
 /*styling for the loading message*/
 .sk-flow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
   width: calc(80px * 1.3);
   height: calc(80px * 1.3);
   display: -webkit-box;
