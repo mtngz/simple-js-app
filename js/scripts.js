@@ -21,7 +21,7 @@ let pokemonRepository = (function () {
       "<button type='button' class='btn btn-default list-group-item list-group-item-action col-10' data-toggle='modal' data-target='#exampleModal'></button>"
     );
     $button.text(pokemon.name);
-    $listItem.appen($button);
+    $listItem.append($button);
     $button.on("click", function () {
       showDetails(pokemon);
     });
