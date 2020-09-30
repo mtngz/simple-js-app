@@ -1,7 +1,6 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
-  let modalContainer = document.querySelector("#modal-container");
 
   function add(pokemon) {
     if (typeof pokemon === "object" && "name" in pokemon) {
@@ -16,16 +15,16 @@ let pokemonRepository = (function () {
   }
 
   function addListItem(pokemon) {
-    let pokemonHomeList = document.querySelector(".pokemonHomeList");
-    let listItem = document.createElement("li");
-    let button = document.createElement("button");
-    button.innerText = pokemon.name;
-    button.classList.add("pokemonListButton");
-    button.addEventListener("click", function () {
+    let $pokemonHomeList = $("ul");
+    $pokemonHomeList.append($listItem);
+    let $button = $(
+      "<button type='button' class='btn btn-default list-group-item list-group-item-action col-10' data-toggle='modal' data-target='#exampleModal'></button>"
+    );
+    $button.text(pokemon.name);
+    $listItem.appen($button);
+    $button.on("click", function () {
       showDetails(pokemon);
     });
-    listItem.appendChild(button);
-    pokemonHomeList.appendChild(listItem);
   }
 
   function showDetails(pokemon) {
@@ -72,67 +71,26 @@ let pokemonRepository = (function () {
   }
 
   function showModal(item) {
-    // Clear all existing modal content
-    modalContainer.innerHTML = "";
+    let modalBody = $(".modal-body");
+    let modalTitle = $(".modal-title");
 
-    // create Element <div> which is the modal
-    let modal = document.createElement("div");
-    modal.classList.add("modal");
+    modalTitle.empty();
+    modalBody.empty();
 
-    // Add content to .modal
-    let closeButtonElement = document.createElement("button");
-    closeButtonElement.classList.add("modal-close");
-    closeButtonElement.innerText = "X";
-    closeButtonElement.addEventListener("click", hideModal);
+    let nameElement = $("<h1>" + item.name + "</h1>");
+    let imageElementFront = $('<img class="modal-img" style="width:50%">');
+    imageElementFront.attr("src", item.imageUrlFront);
+    let imageElementBack = $('<img class="modal-img" style="width:50%">');
+    imageElementBack.attr("src", item.imageUrlBack);
+    let heightElement = $("<h5>" + "height: " + item.height + "</h5>");
+    let weightElement = $("<h5>" + "weight: " + item.weight + "</h5>");
 
-    let titleElement = document.createElement("h1");
-    titleElement.innerText = item.name;
-
-    let specsElement = document.createElement("p");
-    specsElement.innerText =
-      "Height: " + item.height + " Weight: " + item.weight;
-
-    let imageElement = document.createElement("img");
-    imageElement.src = item.imageUrl;
-
-    let typesElement = document.createElement("p");
-    // loop for array to display one or more types correctly
-    item.types.forEach(function (el, index) {
-      if (item.types.length - 1 == index) {
-        typesElement.textContent += el.type.name;
-      } else {
-        typesElement.textContent += el.type.name + ", ";
-      }
-    });
-
-    modal.appendChild(closeButtonElement);
-    modal.appendChild(titleElement);
-    modal.appendChild(specsElement);
-    modal.appendChild(imageElement);
-    modal.appendChild(typesElement);
-    modalContainer.appendChild(modal);
-
-    modalContainer.classList.add("is-visible");
+    modalTitle.append(nameElement);
+    modalBody.append(imageElementFront);
+    modalBody.append(imageElementBack);
+    modalBody.append(heightElement);
+    modalBody.append(weightElement);
   }
-
-  function hideModal() {
-    modalContainer.classList.remove("is-visible");
-  }
-
-  // lets you close the modal by pressing ESCAPE on keyboard
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modalContainer.classList.contains("is-visible")) {
-      hideModal();
-    }
-  });
-
-  // lets you close the modal by clicking anywhere outside the modal
-  modalContainer.addEventListener("click", (e) => {
-    let target = e.target;
-    if (target === modalContainer) {
-      hideModal();
-    }
-  });
 
   return {
     add: add,
