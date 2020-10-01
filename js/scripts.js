@@ -19,7 +19,7 @@ let pokemonRepository = (function () {
     let $listItem = $("<li></li>");
     $pokemonHomeList.append($listItem);
     let $button = $(
-      "<button type='button' class='btn btn-default list-group-item col-12' data-toggle='modal' data-target='#exampleModal'></button>"
+      "<button type='button' class='btn btn-default list-group-item col-12 text-white text-capitalize border-bottom' data-toggle='modal' data-target='#exampleModal'style='background-color: #0f125d'></button>"
     );
     $button.text(pokemon.name);
     $listItem.append($button);
