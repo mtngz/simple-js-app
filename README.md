@@ -2,7 +2,7 @@
 
 This project is a small web app using HTML, CSS, and JavaScript. It loads data from an external API ([https://pokeapi.co](https://pokeapi.co)) and shows details about some Pokémons.
 
-### The application is deployed here [https://mtngz.github.io/simple-js-app/](https://mtngz.github.io/simple-js-app/).
+### The application is deployed here [https://mtngz.github.io/simple-js-app/](https://mtngz.github.io/simple-js-app/){:target="\_blank"}.
 
 # Demo
 
