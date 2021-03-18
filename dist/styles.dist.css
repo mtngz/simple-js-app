@@ -2,6 +2,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 body {
   background-color: #fffefe;
   font-family: "Josefin Sans", sans-serif;
@@ -14,14 +15,17 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
 h1 {
   font-size: 30px;
   font-weight: 700;
 }
+
 h2 {
   font-size: 24px;
   font-weight: 700;
 }
+
 h3 {
   font-size: 18px;
   font-weight: 700;

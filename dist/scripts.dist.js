@@ -27,8 +27,8 @@ let pokemonRepository = (function () {
     let i = $('<img class="modal-img" style="width:50%">');
     i.attr("src", t.imageUrlBack);
     let l = $("<h5>height: " + t.height + "</h5>"),
-      r = $("<h5>weight: " + t.weight + "</h5>");
-    o.append(n), e.append(a), e.append(i), e.append(l), e.append(r);
+      c = $("<h5>weight: " + t.weight + "</h5>");
+    o.append(n), e.append(a), e.append(i), e.append(l), e.append(c);
   }
   return {
     add: n,
@@ -39,7 +39,7 @@ let pokemonRepository = (function () {
       let e = $("<li></li>");
       o.append(e);
       let n = $(
-        "<button type='button' class='btn btn-default list-group-item col-12 text-white text-capitalize border-bottom' data-toggle='modal' data-target='#exampleModal'style='background-color: #0f125d'></button>"
+        "<button type='button' class='btn btn-default list-group-item col-12 text-white text-capitalize mb-2 rounded' data-toggle='modal' data-target='#exampleModal' style='background-color: #0f125d'></button>"
       );
       n.text(t.name),
         e.append(n),
@@ -49,6 +49,12 @@ let pokemonRepository = (function () {
               i(t);
             });
           })(t);
+        }),
+        $("button").mouseover(function () {
+          $(this).css("background-color", "#3b4cca");
+        }),
+        $("button").mouseout(function () {
+          $(this).css("background-color", "#0f125d");
         });
     },
     loadList: function () {
